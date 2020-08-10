@@ -1,6 +1,6 @@
 <h1>Your info</h1>
 
-  <% @employees.each do |employee| %>
+  <% current_user.employee.each do |employee| %>
     <p>
   <strong>Name:</strong>
   <%= @employee.name %>

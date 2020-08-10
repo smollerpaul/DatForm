@@ -17,14 +17,14 @@ class EmployeesController < ApplicationController
 
     def create
         @employee = Employee.new(employee_params)
-   
+
         if @employee.save
             redirect_to @employee
         else
             render 'new'
         end
     end
-
+    
     def update
         @employee = Employee.find(params[:id])
      
@@ -37,7 +37,7 @@ class EmployeesController < ApplicationController
    
   private
     def employee_params
-      params.require(:employee).permit(:company_name, :tax, :address, :name, :position)
+      params.require(:employee).permit(:company_name, :tax, :address, :name, :position, :user_id)
     end
 
 end

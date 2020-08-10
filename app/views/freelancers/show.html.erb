@@ -16,14 +16,8 @@
 <h2>Tasks</h2>
 <%= render @freelancer.tasks %>
 
-<%= link_to 'Add Task', new_freelancer_task_path(@freelancer) %>
+<%= link_to 'Add Task', new_freelancer_task_path(@freelancer), class:"btn btn-primary" %>
 
-
-<%
-=begin%>
- <%= link_to  "Back", employees_path %> 
-<%
-=end%>
 <br>
 <%= link_to "Log out", logout_path, method: :delete %>
  

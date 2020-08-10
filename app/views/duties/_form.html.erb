@@ -1,4 +1,5 @@
-
+    <div class="row content">
+        <div class="col-md-6 col-md-offset-3">
 <%= form_with(model: @duty, url: employee_duties_path, local: true) do |form| %>
 
 <% if @duty.present? && @duty.errors.any? %>
@@ -15,26 +16,28 @@
     </div>
   <% end %>
 
-  <p>
-    <%= form.label :work_description %><br>
-    <%= form.text_area :work_description %>
-  </p>
-  <p>
-    <%= form.label :date %><br>
-    <%= form.date_field :date  %>
-  </p>
+  <div class="form-group ">
+    <%= form.label :work_description %>
+    <%= form.text_area :work_description , class: 'form-control' %>
+     </div>
+  <div class="form-group ">
+    <%= form.label :date %>
+    <%= form.date_field :date , class: 'form-control' %>
+   </div>
 
-  <p>
-    <%= form.label :income %><br>
-    <%= form.text_field :income  %>
-  </p>
-  <p>Note (optional)
-  <% form.label :note  %><br>
-  <%= form.text_area :note %>
-  </p>
-  <p>
-    <%= form.submit "Add" %>
-  </p>
+  <div class="form-group ">
+    <%= form.label :income %>
+    <%= form.text_field :income , class: 'form-control'  %>
+   </div>
+  <div class="form-group ">Note (optional)
+  <% form.label :note  %>
+  <%= form.text_area :note , class: 'form-control' %>
+    </div>
+ <div class="form-group ">
+    <%= form.submit "Add" , class: "btn btn-primary"%>
+   </div>
 <% end %>
+ </div>
+</div>
 
 

@@ -1,40 +1,45 @@
-<%= form_with scope: :freelancer, url: freelancers_path, local: true do |form| %>
+   <div class="row content">
+        <div class="col-md-6 col-md-offset-3">
+          <%= form_with scope: :freelancer, url: freelancers_path, local: true do |form| %>
 
-<% if @freelancer.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@freelancer.errors.count, "error") %> prohibited
-        this info from being saved:
-      </h2>
-      <ul>
-        <% @freelancer.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
- 
-  <p>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-  </p>
+              <% if @freelancer.errors.any? %>
+                  <div id="error_explanation">
+                    <h2>
+                      <%= pluralize(@freelancer.errors.count, "error") %> prohibited
+                      this info from being saved:
+                    </h2>
+                    <ul>
+                      <% @freelancer.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                      <% end %>
+                    </ul>
+                  </div>
+                <% end %>
+              
+                <div class="form-group">
+                  <%= form.label :name %>
+                  <%= form.text_field :name, class: 'form-control' %>
+                 </div>
 
-   <p>
-    <%= form.label :position %><br>
-    <%= form.text_field :position %>
-  </p>
+                <div class="form-group">
+                  <%= form.label :position %>
+                  <%= form.text_field :position, class: 'form-control' %>
+                 </div>
 
-  <p>
-    <%= form.label :start_date %><br>
-    <%= form.date_field :start_date %>
-  </p>
+                <div class="form-group">
+                  <%= form.label :start_date %>
+                  <%= form.date_field :start_date, class: 'form-control' %>
+                 </div>
 
-  <p>
-    <%= form.label :end_date %><br>
-    <%= form.date_field :end_date %>
-  </p>
+                <div class="form-group">
+                  <%= form.label :end_date %>
+                  <%= form.date_field :end_date , class: 'form-control'%>
+                 </div>
 
-  <p>
-    <%= form.submit "Save" %>
-  </p>
+                <div class="form-group">
+                  <%= form.submit "Save",class: "btn btn-primary" %>
+                 </div>
+                <p>
+                 <%= form.hidden_field :user_id, value: current_user.id %>
+                </p>
 <% end %>

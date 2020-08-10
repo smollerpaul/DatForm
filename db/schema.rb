@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_10_014439) do
+ActiveRecord::Schema.define(version: 2020_08_10_064753) do
 
   create_table "duties", force: :cascade do |t|
     t.text "work_description"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 2020_08_10_014439) do
     t.text "position"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_employees_on_user_id"
   end
 
   create_table "freelancers", force: :cascade do |t|
@@ -40,6 +42,8 @@ ActiveRecord::Schema.define(version: 2020_08_10_014439) do
     t.date "end_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_freelancers_on_user_id"
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -62,5 +66,7 @@ ActiveRecord::Schema.define(version: 2020_08_10_014439) do
   end
 
   add_foreign_key "duties", "employees"
+  add_foreign_key "employees", "users"
+  add_foreign_key "freelancers", "users"
   add_foreign_key "tasks", "freelancers"
 end

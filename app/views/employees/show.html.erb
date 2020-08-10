@@ -30,13 +30,9 @@
 <h2>Tasks</h2>
 <%= render @employee.duties %>
 
-<%= link_to 'Add Task', new_employee_duty_path(@employee) %>
+<%= link_to 'Add Task', new_employee_duty_path(@employee), class:"btn btn-primary" %>
 
-<%
-=begin%>
- <%= link_to  "Back", employees_path %> 
-<%
-=end%>
+
 <br>
 <%= link_to "Log out", logout_path, method: :delete %>
  

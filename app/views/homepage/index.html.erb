@@ -1,8 +1,17 @@
-<h1>Choose type of employment</h1>
-
-<%= link_to 'Registered Employee', new_employee_path %>
-<br>
-Or
-<br>
-<%= link_to 'Freelancer', new_freelancer_path %>
+<div class="container">
+<div class="row content">
+    <span>
+        <h1>Choose type of employment</h1>
+    </span>
+     <div class="row justify-content-between">
+    <div class="col">
+      <%= link_to 'Employee', new_employee_path, class: "btn btn-primary btn-lg btn-block" %>
+    </div>
+    <div>Or</div>
+    <div class="col">
+  <%= link_to 'Freelancer', new_freelancer_path, class: " btn btn-primary btn-lg btn-block" %>
+    </div>
+  </div>
+</div>
+</div>
 
