@@ -33,7 +33,7 @@ class FreelancersController < ApplicationController
 
     private
     def freelancer_params
-        params.require(:freelancer).permit(:name, :position)
+        params.require(:freelancer).permit(:name, :position, :start_date, :end_date)
     end
 
 
