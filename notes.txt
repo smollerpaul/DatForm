@@ -1,0 +1,26 @@
+form_with : kiem ham create voi "POST"
+load sai -> re-render 'new' (render cai nam above "create" ) trong route board
+
+load dung -> redirect_to anywhere 
+
+user: email, name, password, password_confirmation
+
+employee: position, company, tax, address
+freelancer: title, start_date, end_date
+
+
+etask: wd, income, date, note _____ belongs to employee
+
+ftask: wd, income, date, customer _____ belongs to freelancer 
+
+1. lam sign up -> homepage (tao homepage controller index)rrrr
+2. add employee task duty freelanceer bla bla
+2. lam log-in -> user/show 
+
+neu dung scope thi phai can url (form_with)
+
+test
+
+
+
+

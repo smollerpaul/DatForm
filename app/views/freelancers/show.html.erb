@@ -1,0 +1,27 @@
+<h1>Freelancer Info</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @freelancer.name %>
+</p>
+ 
+<p>
+  <strong>Position:</strong>
+  <%= @freelancer.position %>
+</p>
+
+
+<%= link_to 'Edit info', edit_freelancer_path(@freelancer) %>
+
+<h2>Tasks</h2>
+<%= render @freelancer.tasks %>
+
+<%= link_to 'Add Task', new_freelancer_task_path(@freelancer) %>
+
+
+<%
+=begin%>
+ <%= link_to  "Back", employees_path %> 
+<%
+=end%>
+ 

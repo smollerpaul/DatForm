@@ -1,0 +1,40 @@
+<h1>Employee Info</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @employee.name %>
+</p>
+ 
+<p>
+  <strong>Position:</strong>
+  <%= @employee.position %>
+</p>
+
+<p>
+  <strong>Works at:</strong>
+  <%= @employee.company_name %>
+</p>
+ 
+<p>
+  <strong>Adress:</strong>
+  <%= @employee.address %>
+</p>
+
+<p>
+  <strong>Tax code:</strong>
+  <%= @employee.tax %>
+</p>
+
+<%= link_to 'Edit info', edit_employee_path(@employee) %>
+
+<h2>Tasks</h2>
+<%= render @employee.duties %>
+
+<%= link_to 'Add Task', new_employee_duty_path(@employee) %>
+
+<%
+=begin%>
+ <%= link_to  "Back", employees_path %> 
+<%
+=end%>
+ 

@@ -1,0 +1,26 @@
+
+<p>
+  <strong>WD:</strong>
+  <%= task.work_description %>
+</p>
+ 
+<p>
+  <strong>Date:</strong>
+  <%= task.date %>
+</p>
+
+<p>
+  <strong>Income:</strong>
+  <%= task.income %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= task.customer %>
+</p>
+
+<p>
+  <%= link_to 'Destroy', [task.freelancer, task],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

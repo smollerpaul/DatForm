@@ -1,0 +1,26 @@
+
+<p>
+  <strong>WD:</strong>
+  <%= duty.work_description %>
+</p>
+ 
+<p>
+  <strong>Date:</strong>
+  <%= duty.date %>
+</p>
+
+<p>
+  <strong>Income:</strong>
+  <%= duty.income %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= duty.notes %>
+</p>
+
+<p>
+  <%= link_to 'Destroy', [duty.employee, duty],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
